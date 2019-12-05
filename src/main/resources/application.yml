@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    generate-ddl: true
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/example?useSSL=false
+    username: root
+
+  security:
+    user:
+      name: actuatorUser
+      password: actuatorUserPassword
+
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
